@@ -1,28 +1,18 @@
 class Solution {
     public boolean isPalindrome(int x) {
-        
-        String str = Integer.toString(x);
-
-        int n = str.length();
-
-        StringBuilder str2 = new StringBuilder(str). reverse();
-        
-        int m = str2.length();
-
-        if(n != m)
-        {
+        if (x < 0) {
             return false;
         }
 
-        
-        for(int i = 0; i < n; i++)
-        {
-            if(str.charAt(i) != str2.charAt(i))
-            {
-                return false;
-            }
+        long reversed = 0;
+        long temp = x;
+
+        while (temp != 0) {
+            int digit = (int) (temp % 10);
+            reversed = reversed * 10 + digit;
+            temp = temp / 10;
         }
-        
-        return true;
+
+        return (reversed == x);
     }
 }
