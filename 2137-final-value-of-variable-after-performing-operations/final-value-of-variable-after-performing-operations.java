@@ -7,7 +7,8 @@ class Solution {
         {
            if(c.equals("++X") || c.equals("X++"))
            {
-               num++;
+               num++;   
+               
            }
            else
            {
