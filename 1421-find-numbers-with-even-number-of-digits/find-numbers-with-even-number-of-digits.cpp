@@ -6,18 +6,25 @@ public:
 
         int count = 0;
         
-        for(int i = 0; i < n; i++)
+        for(int num : nums)
         {
-            int count1 = 0;
-            while(nums[i] != 0)
-            {
-                count1++;
-                nums[i] = nums[i] / 10; 
-            }
-            if(count1++ % 2 == 0)
+            if(countDigits(num) % 2 == 0)
             {
                 count++;
             }
+        }
+        return count;
+    }
+    
+    private:
+
+    int countDigits(int num)
+    {
+        int count = 0;        
+        while(num != 0)
+        {
+            count++;
+            num = num / 10;
         }
         return count;
     }
