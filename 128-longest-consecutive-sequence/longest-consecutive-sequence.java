@@ -1,10 +1,10 @@
 class Solution {
     public int longestConsecutive(int[] nums) {
         int n = nums.length;
-
+        if(n < 1) return 0;
         Arrays.sort(nums);
 
-        int count = 0, longest = 0, lastSmaller = Integer.MIN_VALUE;
+        int count = 0, longest = 1, lastSmaller = Integer.MIN_VALUE;
 
         for(int i = 0; i < n; i++)
         {
