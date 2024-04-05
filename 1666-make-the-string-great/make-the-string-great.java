@@ -14,9 +14,9 @@ class Solution {
             }
         }
         StringBuilder sb = new StringBuilder();
-        while(!st.empty())
+        for(char c: st)
         {
-            sb.insert(0, st.pop());
+            sb.append(c);
         }
         return sb.toString();
     }
