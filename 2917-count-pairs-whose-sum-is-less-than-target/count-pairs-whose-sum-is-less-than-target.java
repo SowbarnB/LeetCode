@@ -1,17 +1,22 @@
 class Solution {
     public int countPairs(List<Integer> nums, int target) {
+        Collections.sort(nums);
+
         int count = 0;
+        int left = 0;
+        int right = nums.size() - 1;
 
-        for(int i = 0; i < nums.size(); i++)
+        while(left < right)
         {
-            for(int j = i + 1;  j < nums.size(); j++)
+            int sum = nums.get(left) + nums.get(right);
+            if(sum < target)
             {
-                int x = nums.get(i) + nums.get(j);
-
-                if(x < target)
-                {
-                    count++;
-                }
+                count += right - left;
+                left++;
+            }
+            else
+            {
+                right--;
             }
         }
         return count;
