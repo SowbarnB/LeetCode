@@ -20,3 +20,4 @@ class Solution {
         return slow;
     }
 }
+//timecomplexity  O(n/2) is equivalent O(n);
