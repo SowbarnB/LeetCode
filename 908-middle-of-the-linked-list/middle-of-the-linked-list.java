@@ -17,8 +17,11 @@ class Solution {
             count = count + 1;
             temp = temp.next;
         }
+
         int midnode = ( count / 2 ) + 1;
-        temp = head; 
+
+        temp = head;
+         
         while(temp != null)
         {
             midnode--;
