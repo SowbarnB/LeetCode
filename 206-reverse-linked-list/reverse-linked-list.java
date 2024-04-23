@@ -22,3 +22,4 @@ class Solution {
         return temp;
     }
 }
+//timecomplexity : O(n)
