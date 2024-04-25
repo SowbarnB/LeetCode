@@ -33,4 +33,4 @@ class Solution {
         return dnode.next;
     }
 }
-//timecomplexity : O(n1 + n2);
+//timecomplexity : O(n + m);
