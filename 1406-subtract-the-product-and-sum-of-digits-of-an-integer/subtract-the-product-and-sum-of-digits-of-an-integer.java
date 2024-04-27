@@ -15,3 +15,4 @@ class Solution {
         return (product - sum);
     }
 }
+//timexomplexity : O(n)
