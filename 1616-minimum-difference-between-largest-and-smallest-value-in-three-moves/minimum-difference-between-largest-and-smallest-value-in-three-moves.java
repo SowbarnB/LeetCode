@@ -20,3 +20,5 @@ class Solution {
         return minimumDiff;
     }
 }
+
+//timecomplexity: O(nlogn)
