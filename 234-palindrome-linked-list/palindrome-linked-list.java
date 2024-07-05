@@ -19,18 +19,19 @@ class Solution {
             st.push(temp.val);
             temp = temp.next;
         }
+
         temp = head;
+
         while(temp != null)
         {
             if(temp.val != st.peek())
             {
                 return false;
             }
-            temp = temp.next;
             st.pop();
+            temp = temp.next;
         }
         return true;
     }
 }
-
-//timecomplexity : O(n)
+//timecomplexity: O(2*N)
