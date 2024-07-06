@@ -32,3 +32,5 @@ public class Solution {
         return null;
     }
 }
+
+//timecomplexity: O(n)
