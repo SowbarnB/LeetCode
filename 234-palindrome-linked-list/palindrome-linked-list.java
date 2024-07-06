@@ -52,4 +52,4 @@ class Solution {
         return newhead;
     }
 }
-//timecomplexity: O(2*N)
+//timecomplexity: O(n)
