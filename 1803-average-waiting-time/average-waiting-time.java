@@ -17,3 +17,4 @@ class Solution {
         return time_waiting / n;
     }
 }
+//timecomplexity: O(n)
