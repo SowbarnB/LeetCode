@@ -4,11 +4,16 @@ class Solution {
         int[] index_pairs = new int[n];
         Deque<Integer> stack_start_ind = new LinkedList<>();
 
-        for (int char_ind = 0; char_ind < n; ++char_ind) {
+        for (int char_ind = 0; char_ind < n; ++char_ind) 
+        {
             char char_s = s.charAt(char_ind);
-            if (char_s == '(') {
+
+            if (char_s == '(') 
+            {
                 stack_start_ind.push(char_ind);
-            } else if (char_s == ')') {
+            } 
+            else if (char_s == ')') 
+            {
                 int start_ind = stack_start_ind.pop();
                 index_pairs[char_ind] = start_ind;
                 index_pairs[start_ind] = char_ind;
@@ -19,12 +24,16 @@ class Solution {
         int cur_ind = 0;
         int cur_dir = 1;
 
-        while (cur_ind < n) {
+        while (cur_ind < n) 
+        {
             char char_s = s.charAt(cur_ind);
-            if (char_s == '(' || char_s == ')') {
+            if (char_s == '(' || char_s == ')') 
+            {
                 cur_ind = index_pairs[cur_ind];
                 cur_dir *= -1;
-            } else {
+            } 
+            else 
+            {
                 res.append(char_s);
             }
             cur_ind += cur_dir;
