@@ -36,6 +36,7 @@ class Solution {
         }
         head = temp.next;
         temp.next = null;
+        
         return head;
     }
 }
