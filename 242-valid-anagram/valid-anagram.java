@@ -9,19 +9,20 @@ class Solution {
             return false;
         }
             
-        char s1[] = s.toCharArray();
-        char t2[] = t.toCharArray();
-
-        Arrays.sort(s1);
-        Arrays.sort(t2);
+        int count[] = new int[26];
 
         for(int i = 0; i < m; i++)
         {
-            if(s1[i] != t2[i])
-            {
-                return false;
-            }
+            count[s.charAt(i) - 'a']++;
+            count[t.charAt(i) - 'a']--;
         }
+
+        for(int i : count)
+        {
+            if(i != 0) return false;
+        }
+
         return true;
     }
 }
+//timecomplexity: O(n)
