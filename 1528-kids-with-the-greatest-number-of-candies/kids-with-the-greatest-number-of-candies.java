@@ -27,3 +27,4 @@ class Solution {
         return result;
     }
 }
+//timecomplexity: O(n)
