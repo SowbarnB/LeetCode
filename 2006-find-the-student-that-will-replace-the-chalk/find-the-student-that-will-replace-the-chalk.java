@@ -9,10 +9,7 @@ class Solution {
             sum = sum + chalk[i]; //11
         }
 
-        while(k >= sum)
-        {
-            k = (int)(k - sum);
-        }
+        k = (int)(k % sum);
 
         for(int i = 0; i < n; i++)
         {
@@ -28,3 +25,4 @@ class Solution {
         return -1;
     }
 }
+//timecomplexity: O(n)
