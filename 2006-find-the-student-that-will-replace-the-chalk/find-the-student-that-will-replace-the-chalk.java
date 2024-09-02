@@ -9,7 +9,10 @@ class Solution {
             sum = sum + chalk[i]; //11
         }
 
-        k = (int) (k % sum); //(22/11) = 2 and rem is 0;
+        while(k >= sum)
+        {
+            k = (int)(k - sum);
+        }
 
         for(int i = 0; i < n; i++)
         {
