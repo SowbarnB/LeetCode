@@ -1,0 +1,27 @@
+class Solution {
+    public int chalkReplacer(int[] chalk, int k) {
+
+        int n = chalk.length;
+        long sum = 0;
+
+        for(int i = 0; i < n; i++)
+        {
+            sum = sum + chalk[i]; //11
+        }
+
+        k = (int) (k % sum); //(22/11) = 2 and rem is 0;
+
+        for(int i = 0; i < n; i++)
+        {
+            if(chalk[i] > k)
+            {
+                return i;
+            }
+            else
+            {
+                k = k - chalk[i];
+            }
+        }
+        return -1;
+    }
+}
