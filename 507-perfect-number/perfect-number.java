@@ -13,13 +13,13 @@ class Solution {
                 {
                     sum = sum + (num / i);
                 }
+                if(sum > num) return false;
             }
+            
         }
-        System.out.print(sum);
+        
 
-        if(sum == num) return true;
-
-        return false;
+        return sum == num;
     }
 }
 
