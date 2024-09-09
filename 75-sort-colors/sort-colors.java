@@ -1,13 +1,29 @@
 class Solution {
     public void sortColors(int[] nums) {
-        for(int i = 0; i < nums.length - 1; i++) {
-            for(int j = 0; j < nums.length - i - 1; j++) {
-                if(nums[j] > nums[j + 1]) {
-                    int temp = nums[j];
-                    nums[j] = nums[j + 1];
-                    nums[j + 1] = temp;
-                }
-            }
+
+        int zero = 0, one = 0, two = 0;
+        
+
+        for(int i : nums)
+        {
+            if(i == 0) zero++;
+            else if(i == 1) one++;
+            else two++;
+        }
+
+        for(int i = 0; i < zero; i++)
+        {
+            nums[i] = 0;
+        }
+        for(int i = zero; i < one + zero; i++)
+        {
+            nums[i] = 1;
+        }
+        for(int i = one + zero; i < two + one + zero; i++)
+        {
+            nums[i] = 2;
         }
     }
 }
+//timecomplexity: O(n)
+//spacecomplexity: O(1)
