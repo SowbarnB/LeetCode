@@ -28,7 +28,7 @@ class Solution {
         {
             if(first.val != second.val)
             {
-                reverseList(newhead);
+                // reverseList(newhead);
                 return false;
             }
             first = first.next;
