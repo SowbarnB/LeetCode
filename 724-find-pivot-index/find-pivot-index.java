@@ -32,3 +32,5 @@ class Solution {
         return -1;
     }
 }
+//timecomplexity: O(n)
+//spacecomplexity: O(n)
