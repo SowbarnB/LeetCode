@@ -43,4 +43,5 @@ class Solution {
         return li;
     }
 }
-
+//timecomplexity: O(n^2)
+//spacecomplexity: O(n)
