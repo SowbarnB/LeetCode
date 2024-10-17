@@ -6,11 +6,12 @@ class Solution {
 
         for(int i = 0; i < n; i++)
         {
-            if(nums[i] != val)
+            if(nums[i] == val)
             {
+                continue;
+            }
                 nums[j] = nums[i];
                 j++;
-            }
         }
 
         
