@@ -22,7 +22,7 @@ class Solution {
                     triplet.add(nums[j]);
                     triplet.add(nums[k]);
 
-                    triplet.sort(null);
+                    // triplet.sort(null);
 
                     if (set.add(triplet)) 
                     {
@@ -44,3 +44,4 @@ class Solution {
         return li;
     }
 }
+
