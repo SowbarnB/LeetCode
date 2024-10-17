@@ -9,6 +9,7 @@ class Solution {
 
         for (int i = 0; i < n - 2; i++) 
         {
+            if(i > 0 && nums[i] == nums[i - 1]) continue;
 
             int j = i + 1, k = nums.length - 1;
 
@@ -21,8 +22,6 @@ class Solution {
                     triplet.add(nums[i]);
                     triplet.add(nums[j]);
                     triplet.add(nums[k]);
-
-                    // triplet.sort(null);
 
                     if (set.add(triplet)) 
                     {
