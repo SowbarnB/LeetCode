@@ -1,19 +1,23 @@
 class Solution {
     public int lengthOfLastWord(String s) {
-        int len = s.length();
+        int n = s.length();
+        
+        int j = n - 1;
+        int count = 0;
 
-        int end = len - 1;
-        int ans = 0;
+        while(s.charAt(j) == ' ')
+        {
+            j--;
+        }
 
-        while(s.charAt(end) == ' ')
+        while(j >= 0 && s.charAt(j) != ' ')
         {
-            end--;
+            count++;
+            j--;
         }
-        while(end >= 0 && s.charAt(end) != ' ')
-        {
-            ans++;
-            end--;
-        }
-        return ans;
+
+        return count;
     }
 }
+//timecomplexity: O(n)
+//spacecomplexity: O(1)
