@@ -3,7 +3,7 @@ class Solution {
 
         String arr[] = new String[numRows];
         if(numRows == 1) return s;
-        
+
         for(int i = 0; i < numRows; i++)
         {
             arr[i] = "";
