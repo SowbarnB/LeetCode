@@ -1,6 +1,6 @@
 class Solution {
     public boolean isPalindrome(String s) {
-        
+
         s = s.toLowerCase();
 
         int left = 0;
@@ -21,8 +21,10 @@ class Solution {
             }
             else
             {
-                if(lc != rc) return false;
-
+                if(lc != rc) 
+                {
+                    return false;
+                }
                 left++;
                 right--;
             }
