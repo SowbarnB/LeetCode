@@ -14,3 +14,5 @@ class Solution {
         
     }
 }
+//timecomplexity: O(log n)
+//spacecomplexity: O(1)
