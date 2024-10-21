@@ -13,3 +13,5 @@ class Solution {
         return true;
     }
 }
+//timecomplexity: O(n)
+//spacecomplexity: O(1)
