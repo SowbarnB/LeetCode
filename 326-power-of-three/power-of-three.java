@@ -5,5 +5,5 @@ class Solution {
         return true;
     }
 }
-//timecomplexity: O(log n)
+//timecomplexity: O(1)
 //spacecomplexity: O(1)
