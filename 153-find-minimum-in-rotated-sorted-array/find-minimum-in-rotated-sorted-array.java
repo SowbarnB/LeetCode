@@ -21,3 +21,5 @@ class Solution {
         return ans;
     }
 }
+//timecomplexity: O(log n)
+//spacecomplexity: O(1)
