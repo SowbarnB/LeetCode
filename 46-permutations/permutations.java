@@ -14,9 +14,9 @@ class Solution {
         }
         for(int i=f;i<=n;i++)
         {
-            swap(nums,i,f);
+            if(i != f) swap(nums,i,f);
             perm(nums,f+1,n);
-            swap(nums,i,f);
+            if(i != f) swap(nums,i,f);
         }
     }
 
