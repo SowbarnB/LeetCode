@@ -16,3 +16,5 @@ class Solution {
         return false;
     }
 }
+//timecomplexity: O(n)
+//spacecomplexity: O(n)
