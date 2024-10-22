@@ -1,22 +1,28 @@
 class Solution {
     public int majorityElement(int[] nums) {
         int n = nums.length;
-        int count = 0;
-        for(int i = 0; i < n; i++)
+
+        int count = 0, candidate = 0;
+
+        for(int i : nums)
         {
-            count = 0;
-            for(int j = 0; j < n; j++)
+            if(count == 0)
             {
-                if(nums[i] == nums[j])
-                {
-                    count++;
-                }
+                candidate = i; 
             }
-            if(count > n/2)
+
+            if(i == candidate)
             {
-                return nums[i];
+                count = count + 1; 
+            }
+            else 
+            {
+                count = count - 1; 
             }
         }
-        return -1;
+        return candidate;
     }
 }
+
+//timecomplexity: O(n)
+//spacecomplexity: O(1)
