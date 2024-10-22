@@ -1,26 +1,19 @@
 class Solution {
     public int missingNumber(int[] nums) {
-
         int n = nums.length;
 
-        int flag;
+        int totalSum = 0, sum = 0;
 
-        for(int i = 0; i <= n; i++)
+        for(int i = 1; i <= n; i++)
         {
-            flag = 0;
-            for(int j = 0; j < n; j++)
-            {
-                if(nums[j] == i)
-                {
-                    flag = 1;
-                    break;
-                }
-            }
-            if(flag == 0)
-            {
-                return i;
-            }
+            totalSum = totalSum + i;
         }
-    return 0;
+
+        for(int i : nums)
+        {
+            sum = sum + i;
+        }
+
+        return (totalSum - sum);
     }
 }
