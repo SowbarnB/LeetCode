@@ -1,18 +1,27 @@
 class Solution {
-    public static int binarysearch(int nums[], int low, int high, int target)
-    {
-        if(low > high) return -1;
+    public int search(int[] nums, int target) {
+        int low = 0;
+        int high = nums.length - 1;
 
-        int mid = low + (high - low) / 2;
-        if(nums[mid] == target) return mid;
-        else if(target > nums[mid])
+        while(low <= high)
         {
-            return binarysearch(nums, mid + 1, high, target);
-        }    
-        return binarysearch(nums, low, mid - 1, target);
-    }
-    public int search(int[] nums, int target) 
-    {
-        return binarysearch(nums, 0, nums.length - 1, target);
+            int mid = low + (high - low) / 2;
+
+            if(target == nums[mid])
+            {
+                return mid;
+            }
+            else if(target < nums[mid])
+            {
+                high = mid - 1;
+            }
+            else
+            {
+                low = mid + 1;
+            }
+        }
+        return -1;
     }
 }
+//timecomplexity: O(log n)
+//spacecomplexity: O(1)
