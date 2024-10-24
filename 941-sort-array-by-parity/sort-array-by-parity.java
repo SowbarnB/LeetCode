@@ -9,9 +9,9 @@ class Solution {
             {
                 if(nums[ele] % 2 != 0)
                 {
-                    int temp = nums[j];
-                    nums[j] = nums[i];
-                    nums[i] = temp;
+                    int temp = nums[i];
+                    nums[i] = nums[j];
+                    nums[j] = temp;
                 }
             }
         }
