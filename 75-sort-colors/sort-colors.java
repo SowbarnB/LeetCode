@@ -2,7 +2,6 @@ class Solution {
     public void sortColors(int[] nums) {
 
         int zero = 0, one = 0, two = 0;
-        
 
         for(int i : nums)
         {
@@ -15,11 +14,12 @@ class Solution {
         {
             nums[i] = 0;
         }
-        for(int i = zero; i < one + zero; i++)
+
+        for(int i = zero; i < zero + one; i++)
         {
             nums[i] = 1;
         }
-        for(int i = one + zero; i < two + one + zero; i++)
+        for(int i = zero + one; i < zero + one + two; i++)
         {
             nums[i] = 2;
         }
