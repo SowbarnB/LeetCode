@@ -14,7 +14,7 @@ class Solution {
                 nums[mid] = temp;
                 right--;
             }
-            else if(nums[mid] % 2 == 0)
+            else 
             {
                 int temp = nums[left];
                 nums[left] = nums[mid];
