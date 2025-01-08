@@ -37,13 +37,13 @@ class Solution {
 
             curr.next = newnode;
             curr = curr.next;
-
-            if(carry != 0)
-            {
-                ListNode newnode1 = new ListNode(carry);
-                curr.next = newnode1;
-            }
         }       
+
+        if(carry != 0)
+        {
+            ListNode newnode = new ListNode(carry);
+            curr.next = newnode;
+        }
         return dummy.next;
     }
 }
